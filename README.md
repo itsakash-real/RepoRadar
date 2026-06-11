@@ -52,7 +52,7 @@ All credentials and API keys remain in serverless Next.js API routes. The browse
 ### Setup
 
 ```bash
-git clone https://github.com/yourusername/repofinder.git
+git clone https://github.com/itsakash-real/RepoRadar.git
 cd repofinder
 npm install
 ```
@@ -96,5 +96,3 @@ Add all `.env.local` variables in the Vercel dashboard under Project → Setting
 | App (signed in)| 50 searches/day               | Resets automatically at midnight |
 
 ---
-> Screenshots in docs/screenshots/ — add homepage.png, results.png,
-> and drawer.png after first run. Size: 1280×800px recommended.
