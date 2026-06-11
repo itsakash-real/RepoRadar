@@ -1,4 +1,4 @@
-import { useUser } from "@clerk/nextjs";
+import { safeUseUser } from "@/hooks/safeClerk";
 import { useCallback, useEffect, useState } from "react";
 import { CreditState } from "@/lib/types";
 
@@ -8,7 +8,7 @@ function getTodayKey(userId: string): string {
 }
 
 export function useCredits() {
-  const { user, isLoaded } = useUser();
+  const { user, isLoaded } = safeUseUser();
   const [credits, setCredits] = useState<CreditState>({
     used: 0,
     limit: 5,

@@ -14,8 +14,9 @@ export async function GET(req: NextRequest) {
     "X-GitHub-Api-Version": "2022-11-28",
   };
 
-  if (process.env.GITHUB_TOKEN) {
-    headers["Authorization"] = `Bearer ${process.env.GITHUB_TOKEN}`;
+  const token = process.env.GITHUB_TOKEN;
+  if (token && token.trim() !== "" && !token.includes("placeholder")) {
+    headers["Authorization"] = `Bearer ${token}`;
   }
 
   try {
